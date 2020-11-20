@@ -3,13 +3,15 @@ namespace Fixwa\Anomaly;
 
 class Application
 {
+
     public function __construct(array $configurations)
     {
         Config::init($configurations);
     }
 
-    public function processRequest()
+    public function go()
     {
+        $router = new Router();
 
     }
 }

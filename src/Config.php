@@ -4,6 +4,7 @@ namespace Fixwa\Anomaly;
 class Config
 {
     public static $BASE_PATH = null;
+    public static $MODULES = [];
 
     public static function init($configurations)
     {
@@ -16,10 +17,9 @@ class Config
                     }
                     $bootstrapFile = Config::$BASE_PATH . '/' . $moduleName . '/bootstrap.php';
                     if (file_exists($bootstrapFile)) {
-                        require $bootstrapFile;
+                        Config::$MODULES[$moduleName] = include $bootstrapFile;
                     }
                 }
-
             }
         }
     }
