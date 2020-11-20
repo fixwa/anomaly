@@ -1,0 +1,7 @@
+vendor/
+*.swp
+.idea
+.AppleDouble
+.DS_Store
+composer.lock
+desktop.ini
