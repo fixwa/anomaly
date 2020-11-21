@@ -1,6 +1,10 @@
 <?php
 namespace Fixwa\Anomaly;
 
+
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+
 class Config
 {
     public static $BASE_PATH = null;
